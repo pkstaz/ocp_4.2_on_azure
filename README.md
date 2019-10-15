@@ -99,7 +99,7 @@ az account list --output table
 
 ######
 Name: Evaluación gratuita
-CloudName: AzureCloud 
+CloudName: AzureCloud
 SubscriptionId: 25acef01-162a-481e-a09a-b2562f685eff  
 State: Enable    
 IsDefault: True

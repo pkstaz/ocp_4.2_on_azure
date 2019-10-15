@@ -31,14 +31,11 @@ sudo reboot
 
 ## Install OCP 4.2 on Azure ##
 
-// Login //
 az login 
 
-
-// Obtener informacion de la cuenta //
 az account show
 
-/*
+######
 [
   {
     "cloudName": "AzureCloud",
@@ -53,7 +50,7 @@ az account show
     }
   }
 ]
-*/
+######
 
 
 az ad sp create-for-rbac --name cestay-azure-ocp-sp
@@ -102,8 +99,7 @@ az account list --output table
 
 ######
 Name                 CloudName    SubscriptionId                        State    IsDefault
--------------------  -----------  ------------------------------------  -------  -----------
-Evaluaci?n gratuita  AzureCloud   25acef01-162a-481e-a09a-b2562f685eff  Enabled  True
+Evaluación gratuita  AzureCloud   25acef01-162a-481e-a09a-b2562f685eff  Enabled  True
 ######
 
 

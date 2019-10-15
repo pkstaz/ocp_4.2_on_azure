@@ -1,6 +1,5 @@
-OCP 4.2 on Azure
-
-RHEL7.6
+## OCP 4.2 on Azure ## 
+## Pre Requisites on RHEL7.6 ##
 
 ## Install python3 local machine ##
 su -

@@ -1,5 +1,6 @@
-## OCP 4.2 on Azure ## 
-## Pre Requisites on RHEL7.6 ##
+## OCP 4.2 on Azure with RHEL 7.6## 
+Instalación desde una maquina RHEL 7.6 hacia una cuenta AZURE. 
+Importante modificar limites de la cuenta Azure para poder crear la maquinas.
 
 ## Install python3 local machine ##
 su -
@@ -27,6 +28,9 @@ gpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/azu
 sudo yum install azure-cli
 sudo reboot
 
+
+## Install OCP 4.2 on Azure ##
+$ login 
 az login 
 
 az account show

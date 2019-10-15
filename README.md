@@ -81,7 +81,7 @@ b68e7135-1215-464b-bbca-8b50898b376e \
 
 ######
 {
-  "clientId": "e761a5d4-32c6-4b48-bb39-a8fb79a2442a",
+  "clientId": "e761a5d4-32c6-4b48-bb39-a8fb79a2442a", 
   "consentType": "AllPrincipals",
   "expiryTime": "2020-10-08T18:33:56.341574",
   "objectId": "1KVh58YySEu7Oaj7eaJEKqsvD0SJmz1Gue_DyA1abM4",
@@ -98,8 +98,11 @@ b68e7135-1215-464b-bbca-8b50898b376e \
 az account list --output table
 
 ######
-Name                 CloudName    SubscriptionId                        State    IsDefault
-Evaluación gratuita  AzureCloud   25acef01-162a-481e-a09a-b2562f685eff  Enabled  True
+Name: Evaluación gratuita
+CloudName: AzureCloud 
+SubscriptionId: 25acef01-162a-481e-a09a-b2562f685eff  
+State: Enable    
+IsDefault: True
 ######
 
 

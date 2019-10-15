@@ -30,11 +30,15 @@ sudo reboot
 
 
 ## Install OCP 4.2 on Azure ##
-$ login 
+
+// Login //
 az login 
 
+
+// Obtener informacion de la cuenta //
 az account show
-######
+
+/*
 [
   {
     "cloudName": "AzureCloud",
@@ -49,7 +53,7 @@ az account show
     }
   }
 ]
-######
+*/
 
 
 az ad sp create-for-rbac --name cestay-azure-ocp-sp

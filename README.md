@@ -8,7 +8,9 @@ Importante modificar limites de la cuenta Azure para poder crear la maquinas.
 `subscription-manager repos --enable rhel-7-server-optional-rpms --enable rhel-server-rhscl-7-rpms`
 
 `yum -y install @development`
+
 `yum -y install rh-python36`
+
 `yum -y install rh-python36-numpy rh-python36-scipy rh-python36-python-tools rh-python36-python-six`
 
 

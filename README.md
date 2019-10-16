@@ -15,9 +15,11 @@ Importante modificar limites de la cuenta Azure para poder crear la maquinas.
 
 
 #### Enable python3 on rhel
-scl enable rh-python36 bash
-python3 -V
-which python
+`scl enable rh-python36 bash`
+
+`python3 -V`
+
+`which python`
 
 
 ## Install azure-cli ##

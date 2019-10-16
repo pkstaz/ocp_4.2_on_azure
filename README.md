@@ -1,15 +1,16 @@
-## OCP 4.2 on Azure with RHEL 7.6## 
+# OCP 4.2 on Azure with RHEL 7.6
 Instalación desde una maquina RHEL 7.6 hacia una cuenta AZURE. 
 Importante modificar limites de la cuenta Azure para poder crear la maquinas.
 
 ## Install python3 local machine ##
-su -
-subscription-manager repos --enable rhel-7-server-optional-rpms --enable rhel-server-rhscl-7-rpms
-yum -y install @development
-yum -y install rh-python36
-yum -y install rh-python36-numpy rh-python36-scipy rh-python36-python-tools rh-python36-python-six
+`su -`
+`subscription-manager repos --enable rhel-7-server-optional-rpms --enable rhel-server-rhscl-7-rpms`
+`yum -y install @development`
+`yum -y install rh-python36`
+`yum -y install rh-python36-numpy rh-python36-scipy rh-python36-python-tools rh-python36-python-six`
 
-## Enable python3 on rhel ##
+
+#### Enable python3 on rhel
 scl enable rh-python36 bash
 python3 -V
 which python

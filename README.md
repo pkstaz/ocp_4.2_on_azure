@@ -43,22 +43,22 @@ az login
 
 az account show
 
-######
-[
-  {
-    "cloudName": "AzureCloud",
-    "id": "25acef01-162a-481e-a09a-b2562f685eff",
-    "isDefault": true,
-    "name": "Evaluaci?n gratuita",
-    "state": "Enabled",
-    "tenantId": "96bb3ea4-0743-4e9f-8421-18f7d351caa0",
-    "user": {
-      "name": "carlos@pksmaster.cl",
-      "type": "user"
-    }
-  }
-]
-######
+
+    [
+      {
+        "cloudName": "AzureCloud",
+        "id": "25acef01-162a-481e-a09a-b2562f685eff",
+        "isDefault": true,
+        "name": "Evaluaci?n gratuita",
+        "state": "Enabled",
+        "tenantId": "96bb3ea4-0743-4e9f-8421-18f7d351caa0",
+        "user": {
+          "name": "carlos@pksmaster.cl",
+          "type": "user"
+        }
+      }
+    ]
+
 
 
 az ad sp create-for-rbac --name cestay-azure-ocp-sp

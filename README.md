@@ -120,8 +120,11 @@ gpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/azu
 `ocp4/openshift-install create install-config --dir=ocp4/`
 
 *azure subscription id: YYYYYYYY-YYYY-YYYY-YYYY-YYYYYYYYYYYY*
+
 *tenantId: XXXXXXXX-XXXX-XXXXXXXXX-XXXXXXXXXXXX*
+
 *appId: AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA*
+
 *password: BBBBBBBB-BBBB-BBBB-BBBB-BBBBBBBBBBBB*
 
 

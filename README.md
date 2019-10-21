@@ -39,101 +39,97 @@ gpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/azu
 
 ## Install OCP 4.2 on Azure ##
 
-az login 
+`az login`
 
-az account show
-
+`az account show`
 
     [
       {
         "cloudName": "AzureCloud",
-        "id": "25acef01-162a-481e-a09a-b2562f685eff",
+        "id": "YYYYYYYY-YYYY-YYYY-YYYY-YYYYYYYYYYYY",
         "isDefault": true,
-        "name": "Evaluaci?n gratuita",
+        "name": "Evaluación gratuita",
         "state": "Enabled",
-        "tenantId": "96bb3ea4-0743-4e9f-8421-18f7d351caa0",
+        "tenantId": "XXXXXXXX-XXXX-XXXXXXXXX-XXXXXXXXXXXX",
         "user": {
-          "name": "carlos@pksmaster.cl",
+          "name": "user@mail.com",
           "type": "user"
         }
       }
     ]
 
 
-
-az ad sp create-for-rbac --name cestay-azure-ocp-sp
-
-######
-{
-  "appId": "b68e7135-1215-464b-bbca-8b50898b376e",
-  "displayName": "cestay-azure-ocp-sp",
-  "name": "http://cestay-azure-ocp-sp",
-  "password": "10b302f1-e123-42d3-bb45-a620fa117ea0",
-  "tenant": "96bb3ea4-0743-4e9f-8421-18f7d351caa0"
-}
-######
-
-az role assignment create --assignee \
-b68e7135-1215-464b-bbca-8b50898b376e --role Contributor
-
-az role assignment create --assignee \
-b68e7135-1215-464b-bbca-8b50898b376e --role "User Access Administrator"
-
-az ad app permission add --id b68e7135-1215-464b-bbca-8b50898b376e \
---api 00000002-0000-0000-c000-000000000000 \
---api-permissions 824c81eb-e3f8-4ee6-8f6d-de7f50d565b7=Role
-
-az ad app permission grant --id \
-b68e7135-1215-464b-bbca-8b50898b376e \
---api 00000002-0000-0000-c000-000000000000
-
-######
-{
-  "clientId": "e761a5d4-32c6-4b48-bb39-a8fb79a2442a", 
-  "consentType": "AllPrincipals",
-  "expiryTime": "2020-10-08T18:33:56.341574",
-  "objectId": "1KVh58YySEu7Oaj7eaJEKqsvD0SJmz1Gue_DyA1abM4",
-  "odata.metadata": "https://graph.windows.net/96bb3ea4-0743-4e9f-8421-18f7d351caa0/$metadata#oauth2PermissionGrants/@Element",
-  "odatatype": null,
-  "principalId": null,
-  "resourceId": "440f2fab-9b89-463d-b9ef-c3c80d5a6cce",
-  "scope": "user_impersonation",
-  "startTime": "2019-10-08T18:33:56.341574"
-}
-######
+`az ad sp create-for-rbac --name cestay-azure-ocp-sp`
 
 
-az account list --output table
+    {
+      "appId": "AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA",
+      "displayName": "cestay-azure-ocp-sp",
+      "name": "http://cestay-azure-ocp-sp",
+      "password": "BBBBBBBB-BBBB-BBBB-BBBB-BBBBBBBBBBBB",
+      "tenant": "XXXXXXXX-XXXX-XXXXXXXXX-XXXXXXXXXXXX"
+    }
 
-######
-Name: Evaluación gratuita
-CloudName: AzureCloud
-SubscriptionId: 25acef01-162a-481e-a09a-b2562f685eff  
-State: Enable    
-IsDefault: True
-######
+`az role assignment create --assignee AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA --role Contributor`
+
+`az role assignment create --assignee AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA --role "User Access Administrator"`
+
+`az ad app permission add --id AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA --api 00000002-0000-0000-c000-000000000000 --api-permissions 824c81eb-e3f8-4ee6-8f6d-de7f50d565b7=Role`
+
+`az ad app permission grant --id AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA --api 00000002-0000-0000-c000-000000000000`
+
+    {
+      "clientId": "e761a5d4-32c6-4b48-bb39-a8fb79a2442a", 
+      "consentType": "AllPrincipals",
+      "expiryTime": "2020-10-08T18:33:56.341574",
+      "objectId": "1KVh58YySEu7Oaj7eaJEKqsvD0SJmz1Gue_DyA1abM4",
+      "odata.metadata": "https://graph.windows.net/96bb3ea4-0743-4e9f-8421-18f7d351caa0/$metadata#oauth2PermissionGrants/@Element",
+      "odatatype": null,
+      "principalId": null,
+      "resourceId": "440f2fab-9b89-463d-b9ef-c3c80d5a6cce",
+      "scope": "user_impersonation",
+      "startTime": "2019-10-08T18:33:56.341574"
+    }
 
 
-mkdir ~/ocp4
+`az account list --output table`
 
-######
-Descargar medios 
-Extraer tar
-######
-
-
-ocp4/openshift-install create install-config --dir=ocp4/
-
-azure subscription id: 25acef01-162a-481e-a09a-b2562f685eff
-tenantId: 96bb3ea4-0743-4e9f-8421-18f7d351caa0
-
-azure service principal client id
-appId: b68e7135-1215-464b-bbca-8b50898b376e
-password: 10b302f1-e123-42d3-bb45-a620fa117ea0
+    Name: Evaluación gratuita
+    CloudName: AzureCloud
+    SubscriptionId: YYYYYYYY-YYYY-YYYY-YYYY-YYYYYYYYYYYY
+    State: Enable
+    IsDefault: True
 
 
-cat ~/ocp4/install-config.yaml
-cat ~/.azure/osServicePrincipal.json
+------------
 
-ocp4/openshift-install create cluster --dir=ocp4/
+
+**Crear directorio en el HOME**
+
+`cd ~`
+
+`mkdir ocp4`
+
+**Descargar medios en ocp4**
+**Extraer tar**
+
+------------
+
+`cd ~`
+
+`ocp4/openshift-install create install-config --dir=ocp4/`
+
+*azure subscription id: YYYYYYYY-YYYY-YYYY-YYYY-YYYYYYYYYYYY*
+*tenantId: XXXXXXXX-XXXX-XXXXXXXXX-XXXXXXXXXXXX*
+*appId: AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA*
+*password: BBBBBBBB-BBBB-BBBB-BBBB-BBBBBBBBBBBB*
+
+
+`cat ~/ocp4/install-config.yaml`
+
+`cat ~/.azure/osServicePrincipal.json`
+
+`ocp4/openshift-install create cluster --dir=ocp4/`
+
+
 

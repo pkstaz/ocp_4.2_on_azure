@@ -94,11 +94,13 @@ gpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/azu
 
 `az account list --output table`
 
+    ##############################
     Name: Evaluación gratuita
     CloudName: AzureCloud
     SubscriptionId: YYYYYYYY-YYYY-YYYY-YYYY-YYYYYYYYYYYY
     State: Enable
     IsDefault: True
+    ##############################
 
 
 ------------

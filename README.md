@@ -111,6 +111,7 @@ gpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/azu
 `mkdir ocp4`
 
 **Descargar medios en ocp4**
+
 **Extraer tar**
 
 ------------
